@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //-------------------------------------myIndexOf-------------------------------
+        var array1 = [1, 2, 3, 4, 5, 1, 2];
+        
+        function myIndexOf(arr, searchElement, fromIndex = 0) {
+            var index = fromIndex;
+            for (index; index < arr.length; index++) {
+                if (arr[index] === searchElement) {
+                    return index;
+                }
+            }
+            return -1;
+        }
+        
+        // console.log(myIndexOf(array1, 1, 2));
+        console.log(array1.indexOf(1, 2));
+
+        //-------------------------------------myLastIndexOf-------------------------------
+        var array2 = [1, 2, 3, 4, 5, 1, 2];
+
+        function myLastIndexOf(arr, searchElement, fromIndex = arr.length) {
+            var index = fromIndex;
+            for (index; index >= 0; index--) {
+                if(arr[index] === searchElement) {
+                    return index;
+                }
+            }
+            return -1;
+        }
+        // console.log(myLastIndexOf(array2, 2));
+        console.log(array2.lastIndexOf(2));
+
+        //-------------------------------------myFind-------------------------------
+        var array3 = [-1, 0, 'asd', 5, 1, 2];
+
+        function myFind(arr, callback) {
+            for (item of arr) {
+                if(callback(item)) {
+                    return item;
+                }
+            }
+            return undefined;
+        }
+        
+        function positiveNumber(num) {        // callback-function
+            return num > 0;
+        }
+        
+        // console.log(myFind(array3, positiveNumber));
+        console.log(array3.find(positiveNumber));
+
+
+        //-------------------------------------myFind-------------------------------
+
+        var array4 = [-1, 0, 'asd', 5, 1, 2];
+
+        function myFindIndex(arr, callback) {
+            for (var i = 0; i < arr.length; i++) {
+                if (callback(arr[i])) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        // console.log(myFindIndex(array4, positiveNumber));
+        console.log(array4.findIndex(positiveNumber));
+
+        //-------------------------------------myIncludes-------------------------------
+
+        var array5 = [-1, 0, 'asd', 5, 1, 2];
+
+        function myIncludes(arr, searchElement, fromIndex = 0) {
+            var index = fromIndex;
+            for (index; index < arr.length; index++) {
+                if (arr[index] === searchElement) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // console.log(myIncludes(array5, 2));
+        console.log(array5.includes(2));
+
+        //-------------------------------------myEvery-------------------------------
+
+        var array6 = [-1, 0, 'asd', 5, 1, 2];
+
+        function myEvery(arr, callback) {
+            if (arr.length === 0) {
+                return true;
+            }
+            var flag = false;
+            for (var index = 0; index < arr.length; index++) {
+                if (callback(arr[index])) {
+                    flag = true;
+                } else {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        // console.log(myEvery(array6, positiveNumber));
+        console.log(array6.every(positiveNumber));
+
+        //-------------------------------------mySome-------------------------------
+
+        var array7 = [-1, 0, 'asd', 2];
+
+        function mySome(arr, callback) {
+            for (var index = 0; index < arr.length; index++) {
+                if (callback(arr[index])) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        console.log(mySome(array7, positiveNumber));
+        // console.log(array7.some(positiveNumber));
+
+    </script>
+
+</body>
+</html>
