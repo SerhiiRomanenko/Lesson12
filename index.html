@@ -23,8 +23,8 @@
             return -1;
         }
         
-        // console.log(myIndexOf(array1, 1, 2));
-        console.log(array1.indexOf(1, 2));
+        console.log(myIndexOf(array1, 1, 2));
+        // console.log(array1.indexOf(1, 2));
 
         //-------------------------------------myLastIndexOf-------------------------------
         var array2 = [1, 2, 3, 4, 5, 1, 2];
@@ -38,8 +38,8 @@
             }
             return -1;
         }
-        // console.log(myLastIndexOf(array2, 2));
-        console.log(array2.lastIndexOf(2));
+        console.log(myLastIndexOf(array2, 2));
+        // console.log(array2.lastIndexOf(2));
 
         //-------------------------------------myFind-------------------------------
         var array3 = [-1, 0, 'asd', 5, 1, 2];
@@ -57,12 +57,11 @@
             return num > 0;
         }
         
-        // console.log(myFind(array3, positiveNumber));
-        console.log(array3.find(positiveNumber));
+        console.log(myFind(array3, positiveNumber));
+        // console.log(array3.find(positiveNumber));
 
 
         //-------------------------------------myFind-------------------------------
-
         var array4 = [-1, 0, 'asd', 5, 1, 2];
 
         function myFindIndex(arr, callback) {
@@ -74,11 +73,10 @@
             return -1;
         }
 
-        // console.log(myFindIndex(array4, positiveNumber));
-        console.log(array4.findIndex(positiveNumber));
+        console.log(myFindIndex(array4, positiveNumber));
+        // console.log(array4.findIndex(positiveNumber));
 
         //-------------------------------------myIncludes-------------------------------
-
         var array5 = [-1, 0, 'asd', 5, 1, 2];
 
         function myIncludes(arr, searchElement, fromIndex = 0) {
@@ -91,11 +89,10 @@
             return false;
         }
 
-        // console.log(myIncludes(array5, 2));
-        console.log(array5.includes(2));
+        console.log(myIncludes(array5, 2));
+        // console.log(array5.includes(2));
 
         //-------------------------------------myEvery-------------------------------
-
         var array6 = [-1, 0, 'asd', 5, 1, 2];
 
         function myEvery(arr, callback) {
@@ -114,11 +111,10 @@
             return flag;
         }
 
-        // console.log(myEvery(array6, positiveNumber));
-        console.log(array6.every(positiveNumber));
+        console.log(myEvery(array6, positiveNumber));
+        // console.log(array6.every(positiveNumber));
 
         //-------------------------------------mySome-------------------------------
-
         var array7 = [-1, 0, 'asd', 2];
 
         function mySome(arr, callback) {
