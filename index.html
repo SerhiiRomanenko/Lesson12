@@ -15,10 +15,10 @@
             }
             var array1 = [1, 2, 3, 4, 5, 1, 2];
             function myIndexOf(arr, searchElement, fromIndex = 0) {
-                var index = fromIndex;
-                for (index; index < arr.length; index++) {
-                    if (arr[index] === searchElement) {
-                        return index;
+                var i = fromIndex;
+                for (i; i < arr.length; i++) {
+                    if (arr[i] === searchElement) {
+                        return i;
                     }
                 }
                 return -1;
@@ -31,10 +31,10 @@
         var array2 = [1, 2, 3, 4, 5, 1, 2];
 
         function myLastIndexOf(arr, searchElement, fromIndex = arr.length) {
-            var index = fromIndex;
-            for (index; index >= 0; index--) {
-                if(arr[index] === searchElement) {
-                    return index;
+            var i = fromIndex;
+            for (i; i >= 0; i--) {
+                if(arr[i] === searchElement) {
+                    return i;
                 }
             }
             return -1;
@@ -46,9 +46,9 @@
         var array3 = [-1, 0, 'asd', 5, 1, 2];
 
         function myFind(arr, callback) {
-            for (item of arr) {
-                if(callback(item)) {
-                    return item;
+            for (var i = 0; i < arr.length; i++) {
+                if (callback(arr[i], i, arr)) {
+                    return arr[i];
                 }
             }
             return undefined;
