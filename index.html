@@ -93,22 +93,15 @@
         // console.log(array5.includes(2));
 
         //-------------------------------------myEvery-------------------------------
-        var array6 = [-1, 0, 'asd', 5, 1, 2];
+        var array6 = [1, 0, 'asd', 5, 1, 2];
 
         function myEvery(arr, callback) {
-            if (arr.length === 0) {
-                return true;
-            }
-            var flag = false;
             for (var index = 0; index < arr.length; index++) {
-                if (callback(arr[index])) {
-                    flag = true;
-                } else {
-                    flag = false;
-                    break;
+                if (!callback(arr[index])) {
+                    return false;
                 }
             }
-            return flag;
+            return true;
         }
 
         console.log(myEvery(array6, positiveNumber));
